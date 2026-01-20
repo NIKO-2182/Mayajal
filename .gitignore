@@ -1,0 +1,6 @@
+#file ignored
+PersonaGen/tests
+PersonaGen/artifacts.db
+PersonaGen/artifacts.jsonl
+PersonaGen/cli_output.txt
+
