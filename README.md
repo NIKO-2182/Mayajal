@@ -1,7 +1,7 @@
 # Māyājāl  
 **Synthetic Deception Infrastructure for Red-Team & Adversarial Simulation**
 
-> *Māyājāl* (मायाजाल) — “the web of illusion” — is a research-driven platform for generating **believable, self-consistent synthetic digital environments** designed to withstand human and automated scrutiny.  
+> *Māyājāl* “the web of illusion” is a research-driven platform for generating **believable, self-consistent synthetic digital environments** designed to withstand human and automated scrutiny.  
 It sits at the intersection of **LLMs, cyber deception, honeypots, and red-team simulation**.
 
 This repository currently hosts **two tightly coupled engines** that together form the foundation of a scalable deception ecosystem.
@@ -12,7 +12,7 @@ This repository currently hosts **two tightly coupled engines** that together fo
 
 Māyājāl is **not** a chatbot, assistant, or agent framework.
 
-It is a **data-generation and behavioral-simulation system** whose sole purpose is to produce **realistic digital artifacts and terminal behavior** that look, feel, and fail like real systems — long enough to fool skilled humans.
+It is a **data-generation and behavioral-simulation system** whose sole purpose is to produce **realistic digital artifacts and terminal behavior** that look, feel, and fail like real systems long enough to fool skilled humans.
 
 Think:
 - Fake corporate laptops
@@ -28,7 +28,7 @@ Think:
 ### 1️⃣ Synthetic Artifact Generator (SAG)
 *A persona-driven artifact factory*
 
-From a **short natural-language persona description**, SAG generates **hundreds to thousands of coherent digital artifacts** that plausibly belong to a single human operating in a modern (≈2026) technical environment.
+From a **short natural-language persona description**, SAG generates **hundreds to thousands of coherent digital artifacts** that plausibly belong to a single human operating in a modern technical environment.
 
 #### Examples of Generated Artifacts
 - `.env` files with realistic but fake secrets
@@ -52,7 +52,7 @@ All artifacts:
 ### 2️⃣ Deception Engine (Shell Simulation)
 *A behavioral realism layer*
 
-The Deception Engine focuses on **interactive terminal behavior** — not command syntax, but **command output realism**.
+The Deception Engine focuses on **interactive terminal behavior** not command syntax, but **command output realism**.
 
 Given a shell command, the model responds with output that resembles:
 - A real Linux system
@@ -141,18 +141,6 @@ Before each generation batch:
 
 ---
 
-### Human-Centric Evaluation
-
-Blind reviews by domain experts:
-- Believability score (0–5)
-- “Would this fool me for 30–60 seconds?”
-- Internal consistency judgments
-
-Target:
-> **≥ 4.0 / 5.0 realism under medium–high scrutiny**
-
----
-
 ## 🎯 Intended Use Cases
 
 - High-interaction honeypots
@@ -196,4 +184,4 @@ If you’re interested in:
 
 open an issue or start a discussion.
 
-This project is intentionally opinionated — and that’s the point.
+This project is intentionally opinionated and that’s the point.
