@@ -13,17 +13,17 @@ class GenerationConfig(BaseModel):
     
     num_artifacts: int = Field(default=25, ge=1, le=500)
     temperature: float = Field(default=0.75, ge=0.0, le=1.0)
-    max_tokens: int = Field(default=2000, ge=100, le=4000)
+    max_tokens: int = Field(default=20000, ge=100, le=4000)
     seed: Optional[int] = None
     categories: List[str] = Field(default_factory=lambda: ["code", "config", "docs"])
-    model: str = "gemini-3-flash-preview"
+    model: str = "gemini-2.5-flash"
 
     class Config:
         json_schema_extra = {
             "example": {
                 "num_artifacts": 25,
                 "temperature": 0.75,
-                "max_tokens": 2000,
+                "max_tokens": 20000,
                 "categories": ["code", "config"]
             }
         }

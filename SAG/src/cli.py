@@ -28,8 +28,8 @@ def main():
     parser.add_argument(
         "--artifacts",
         type=int,
-        default=25,
-        help="Number of artifacts to generate (default: 25)"
+        default=5,
+        help="Number of artifacts to generate (default: 5)"
     )
     
     parser.add_argument(

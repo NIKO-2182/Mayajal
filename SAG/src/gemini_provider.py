@@ -25,13 +25,13 @@ if parent_env_path.exists():
 class GeminiProvider:
     """LangChain wrapper for Google Gemini API"""
 
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-3-flash-preview"):
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-2.5-flash"):
         """
         Initialize Gemini provider
         
         Args:
             api_key: Google API key (or use GEMINI_API_KEY env var or .env file)
-            model: Model name (default: gemini-3-flash-preview)
+            model: Model name (default: gemini-2.5-flash)
         """
         if api_key is None:
             api_key = os.getenv("GEMINI_API_KEY")
@@ -60,9 +60,9 @@ class GeminiProvider:
     def generate_artifacts(
         self,
         prompt: str,
-        num_artifacts: int = 25,
+        num_artifacts: int = 5,
         temperature: float = 0.75,
-        max_tokens: int = 2000,
+        max_tokens: int = 100000,
     ) -> List[Dict]:
         """
         Generate artifacts using Gemini
@@ -124,7 +124,7 @@ class GeminiProvider:
         try:
             # Find the JSON array in the response
             if "[" not in content or "]" not in content:
-                print(f"DEBUG: No JSON array found in response. First 100 chars: {content[:100]}")
+                print(f"DEBUG: No JSON array found in response. First 300 chars: {content[:300]}")
                 return artifacts
             
             # Extract from first [ to last ]
@@ -263,6 +263,6 @@ class GeminiProvider:
                 
         except Exception as e:
             print(f"Failed to parse JSON from response: {e}")
-            print(f"DEBUG: Response content (first 300 chars): {content[:300]}")
+            print(f"DEBUG: Response content (first 500 chars): {content[:500]}")
         
         return artifacts
